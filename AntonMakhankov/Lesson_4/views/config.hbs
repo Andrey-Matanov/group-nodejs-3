@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1>Настройка новостной ленты</h1>
+            <form method="POST" action="/config">
+                <div class="form-row">
+                    <div class="form-group col-6">
+                        <label for="newsSource">Источник новостей</label>
+                        <select name="newsSource" class="form-control" id="newsSource">
+                            <option value="1">Яндекс Новости</option>
+                            <option value="2">Lenta</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-6">
+                        <label for="newsMaxCount">Количество выводимых новостей</label>
+                        <input type="number" min="0" max="15" name="newsMaxCount" class="form-control" id="newsMaxCount" value="{{cookies.newsMaxCount}}">
+                    </div>
+                    <div class="form-group col-12">
+                        <button type="submit" class="btn btn-primary">Сохранить</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

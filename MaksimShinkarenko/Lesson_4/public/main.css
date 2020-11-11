@@ -1,0 +1,42 @@
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  list-style-type: none;
+
+}
+
+.wrapper li {
+  max-width: 200px;
+  border: 1px solid #000;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding: 5px 5px;
+  margin: 0 10px 20px 10px;
+  box-shadow: 5px 5px 3px #97a398;
+}
+
+.wrapper a {
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+  color: black;
+  display: inline-block;
+}
+
+.wrapper li:hover {
+  box-shadow: inset 2px 2px 2px #c1c9c6,
+  5px 5px 3px #c1c9c6;
+}
+
+.wrapper li:active {
+  position: relative;
+  left: 1px;
+  top: 1px;
+  box-shadow: inset 2px 2px 2px #c1c9c6,
+  4px 4px 3px #c1c9c6;
+}
+
+
+

@@ -1,0 +1,37 @@
+<div>
+  <table border="1" cellpadding=10 cellspacing=0>
+    <tr>
+      <th>№</th>
+      <th>Место</th>
+      <th>Ось</th>
+      <th>Загрузок</th>
+    </tr>
+    {{#each parsedData.top}}
+      <tr align=center>
+        <td>{{this.line}}</td>
+        <td>{{this.place}}</td>
+        <td>{{this.name}}</td>
+        <td>{{this.loadsPerDay}}</td>
+      </tr>
+    {{/each}}
+  </table>
+  <form action="/" method="POST">
+    <div class='ctrl'>
+      <div>
+        <input 
+          type="radio"
+          name="isTop"
+          value="1" 
+          {{#if parsedData.isTopCookies}}checked{{/if}}>
+            самые популярные<br>
+        <input 
+          type="radio"
+          name="isTop"
+          value="0"
+          {{#unless parsedData.isTopCookies}}checked{{/unless}}> 
+            самые не популярные
+      </div>
+      <input type = "submit" name = "submit" value = "Применить">
+    </div>
+  </form>
+</div>

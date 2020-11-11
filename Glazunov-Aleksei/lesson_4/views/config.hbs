@@ -1,0 +1,26 @@
+<div>
+    <h2>Настроить вывод количества новостей</h2>
+    <form method="POST" action="/config">
+    <select name="news" id="selectNews">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+    <input type="submit" value="Отправить">
+    </form>
+</div>
+<div>
+    <h2>Новости</h2>
+    <ul>
+        {{#each topNews}}
+            <li><a href="{{this.urli}}">{{this.text}}</a></li>
+        {{/each}}
+    </ul>
+</div>
+<script>
+    document.querySelector('#selectNews').selectedIndex = {{count}};
+    
+</script>
+

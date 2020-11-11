@@ -1,0 +1,34 @@
+<div class="container">
+    <a href="/logout">Выйти</a>
+    <div class="description">
+        <h3>Новости взяты с сайта Yandex.ru на текущую дату - {{date}}</h3>
+    </div>
+    <div>
+        <form action="/news" method="POST" class="action-form">
+            <label for="count">
+                Кол-во новостей:
+                <select name="count" id="count">
+                    {{#each selectCount}}
+                        <option {{selectedCount this.value}} value="{{this.value}}">{{this.name}}</option>
+                    {{/each}}
+                </select>
+            </label>
+            <label for="lang">
+                Язык:
+                <select name="lang" id="lang">
+                    {{#each selectLang}}
+                        <option {{selectedLang this.value}} value="{{this.value}}">{{this.name}}</option>
+                    {{/each}}
+                </select>
+            </label>
+            <input type="submit" value="Сохранить" name="save">
+        </form>
+    </div>
+    <div>
+        <ol>
+            {{#each newsCount}}
+            <li><a href="{{this.href}}">{{this.text}}</a></li>
+            {{/each}}
+        </ol>
+    </div>
+</div>
